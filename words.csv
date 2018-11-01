@@ -1,0 +1,310 @@
+slice|切片
+@property|特性属性：通过@property装饰器，可以对模拟属性的赋值和取值加以控制
+getter|获取者
+setter|设置者
+@xxx.setter|xxx 为@property 装饰过后的特性属性名， @xxx.setter装饰过后可以使用obj.xxx = value 来赋值
+__add__(self, rhs)|加算运算符的重载
+rhs|right hand side   右手边
+__sub__(self, rhs)|减法运算符的重载
+__mul__(self, rhs)|乘法运算符的重载
+__truediv__(self, rhs)|除法运算符的重载
+__floordiv__(self, rhs)|地板除法运算符的重载
+__mod__(self, rhs)|求余运算符的重载
+__pow__(self, rhs)|幂运算符的重载
+__radd__(self, lhs)|反向加法运算符的重载
+__rsub__(self, lhs)|反向减法运算符的重载
+__rmul__(self, lhs)|反向乘法运算符的重载
+lhs|left hand side   左手边
+__iadd__(self, rhs)|+= 二元运算符的重载， 只要在普通的算术运算符方法名加i, 如：__add__   --> __iadd__
+__lt__(self, rhs)|比较运算符<  重载， little than  记为lt 
+__le__(self, rhs)|比较运算符<=  重载， little equal  记为le
+__gt__(self, rhs)|比较运算符>  重载， great than  记为gt
+__ge__(self, rhs)|比较运算符>=  重载， great equal  记为ge
+__eq__(self, rhs)|比较运算符==  重载， 记为eq
+__ne__(self, rhs)|比较运算符!=  重载，noe equal 记为ne
+__and__(self, rhs)|位运算符的重载： &
+__or__(self, rhs)|位运算符的重载： or
+__xor__(self, rhs)|位运算符的重载： xor  位异或
+statement|语句
+embed|嵌套
+express|表达式
+raw|raw 字符串， r'字符串内容'， 使字符串中的转义字符失效
+\r|返回光标至行首
+\f|换页
+\v|垂直制表符
+\b|倒退
+\0|字符串，字符值为0
+stamp|标记
+datetime|时间类型， 格式“YYYY-MM-DD HH:MM:SS”
+curtime()|MySQL中的函数，返回当前时间
+curdate()|MySQL中的函数，返回当前日期
+now()|MySQL中的函数，返回当前服务器日期时间
+insert into 表名[(字段名)] values(值1),(值2)...|插入语句
+select 字段名 from 表名 where 字段名 (now - interval 时间间隔单位);|日期时间的运算，时间间隔单位的表示方式 1 day  或 3 hour 或 1 minitue 或 1 year
+alter|更改
+alter table 表名 add 字段名 数据类型|添加字段在最后
+alter table 表名 add 字段名 数据类型 first|添加字段在最前
+alter table 表名 add 字段名 数据类型 after 字段名|添加字段在某个字段前
+alter table 表名 drop 字段名|删除某个字段
+alter table 表明 modify 字段名 新数据类型;|修改字段的数据类型
+modify|更改
+alter table 表名 rename 新表名;|修改表名
+alter table 表名 change 原字段名;|修改字段名
+update 表名 set 字段1=值1,字段2= 值2 where 条件;|更新表记录
+screen|屏幕
+abs(x)|取x的绝对值
+round(number[, ndigits])|对数值进行近似的四舍五入，ndigits是小数向右取整的位数，负数表示向左取整
+s  = "I'am Student."     'I am "YangWenjun"'|隐士字符串的字面值拼接，得到的字符串：'''I'am Student.I am "YangWenjun"'''
+ord(c)|返回一个字符的Unicode值
+chr(i)|返回i 值对应的字符
+binary|二进制
+bin(i)|将整数转换为二进制字符串
+oct(i)|将整数转换为八进制字符串
+hex(i)|将整数转换为十六进制字符串
+isalpha()|判断字符串中的字符是不是全是字母
+isdigit()|判断字符串中的字符是不是全是数字
+islower()|判断字符串中的字符是否全为小写字母
+isupper()|判断字符串中的字符是否全为大写字母
+center(width[, fill])|将原字符居中，左右默认填充空格
+strip([chars])|去掉字符左右的字符，默认为空格
+replace(old, new[, count])|将原字符串的old用new代替，生成一个新的字符串
+S.startswith(prefix[, start[, end]])|返回S是否是以prefix开头，如果以prefix开头返回True,否则返回False
+S.endswith(suffix[, start[, end]]) |返回S是否是以suffix结尾，如果以suffix结尾返回True,否则返回False
+suffix|后缀
+prefix|前缀
+distinct|SQL语句中去重：select distinct 字段 from 表名
+unique|唯一
+primary key|主键
+foreign key|外键
+create index 索引名称 on 表名(字段);|在已有表中创建普通索引
+show index from 表名\G;|在表中查看普通索引
+drop index 索引名 on 表名|在表中删除普通索引
+auto_increment|自动增长属性
+field|字段
+terminated|终止
+终端操作：Ctrl+d|退出终端
+终端命令：pwd|显示当前工作路径
+终端命令：mkdir|创建一个或多个文件夹
+终端命令：rmdir|删除一个或多个文件夹
+终端命令：touch 文件名|文件不存在，创建空文件，文件存在则更新修改时间
+终端命令：rm -i|删除文件或文件夹
+终端命令：tree [文件夹]|显示文件夹的结构
+终端命令：命令 --help|帮助选项
+终端命令：cp 原文件[夹] 目标文件[夹]|复制文件
+终端命令：mv 文件 目标文件|文件搬移或更名
+终端命令：Ctrl + C|终止终端内正在运行的程序
+终端命令：grep "内容" 文件名|查询文件中的某个内容
+终端命令：grep  -r  "内容" 文件夹|递归搜索文件夹内的文件
+终端命令：tar czvf 文件名.tar.gz 源文件路径|打包压缩文夹或文件夹
+终端命令：tar xzvf 文件名.tar.gz|解包解压文件
+终端命令：subl 文件名|用sublime 打开文本文件
+shallow copy|浅拷贝
+comprehension|推导式
+[表达式 for 变量 in 可迭代对象 if 真挚表达式]|列表推导式，生成列表
+[x + y for x in 'ABC' for y in '123']|['A1', 'A2', 'A3', 'B1', 'B2', 'B3', 'C1', 'C2', 'C3']
+tuple|元组
+[x ** 2 for x in reversed([1, 3, 5, 7])]|[49, 25, 9, 1]
+iterable|可迭代对象
+**kwargs|关键字传参
+删除字典中的元素|del 字典[键]
+字典1.update(字典2)|将字典2合并到字典1中，如果键相同，则此键的值为字典2的值为新值
+字典.get(key, default=None)|返回键key所对应的值，如果没有此键则返回default
+{键表达式 : 值表达式 for 变量 in 可迭代对象[if 真值表达式]}|字典推导式
+{表达式 for 变量  in 可迭代对象 [if 真值表达式]}|集合推导式
+frozenset|固定集合
+位置传参的定义|实际参数的对应关系与形参的对应关系是按位置依次对应的
+position|位置
+sequence|序列
+keyword|关键字
+arg|参数
+序列传参定义|序列传参是指函数在调用过程中，用*将序列拆解按位置进行传参的方式
+关键字传参定义|关键字传参是指传参时，按照形参的名称给形参赋值
+字典关键字传参|是指实参为字典，将字典用**拆解后进行关键字传参的方式
+函数的缺省参数|def 函数名(形参名1=默认实参1, 形参名2=默认实参名2....)
+函数形参的定义方式|位置形参,星号元组形参,命名关键字形参,双星号字典形参
+位置形参|def 函数名(形参名1, 形参名1, ...)
+星号元组形参：收集多余位置传参| def 函数名(*元组形参名)
+命名关键字形参|强制所有的参数必须用关键字传参或字典关键字传参
+命名关键字形参的语法|def 函数名(*, 命名关键字形参)  或  def 函数名(*args, 命名关键字形参)
+双星号字典形参|收集多余的关键字形参
+双星号字典形参[语法]|def 函数名(**字典形参名)
+全局变量的概念|定义在函数外部，模块内部的变量称为全局变量
+局部变量的概念|定义在函数内部的变量称为局部变量（函数的形参也是局部变量）
+内建函数：globals()|返回当前全局作用域内变量的字典
+内建函数：locals()|返回当前局部作用域内变量的字典
+python变量作用域：（包裹）Enclosing function locals|外部嵌套函数作用域
+python变量作用域：Local(function)|局部作用域（函数内）
+python变量作用域：Global(moudle)|函数定义所在模块作用域
+python变量作用域：Builtin(python)|python内置模块的作用域
+global语句的作用|告诉解释执行器，global语句声明的一个或多个变量， 这些变量的作用域为模块级作用域，也称作全局作用域
+nonlocal语句的作用|告诉解释执行器，nonlocal声明的变量不是局部变量，也不是全局变量，而是外部嵌套函数内的变量
+lambda 表达式|创建一个匿名函数对象，同def 类似，但不提供函数名
+lambda 表达式语法|lambda [形参名1, 形参名2, ...]:   表达式
+内建函数：eval(source, globals=None, locals=None)|把一个字符串当成一个表达式来执行，返回表达式执行后的结果
+内建函数：exec(source, globals=None, locals=None)|把一个字符串当成程序来执行
+函数式编程|指用一系列函数解决问题
+函数的可重入性|当一个函数的输入一定，则输出必然一定的函数称为可重入函数
+High Order Function|阶函数（可用的函数式编程函数）
+高阶函数的条件|函数接受一个或多个函数作为参数传入，或者函数返回一个函数
+recursion|递归函数
+递归|函数直接或间接调用自身
+factorial|阶乘
+closure|闭包
+闭包的概念|如果一个内嵌函数访问了外部嵌套函数的变量，且这个函数是外部函数的返回值
+decorator|装饰器
+装饰器的概念|装饰器是一个函数，主要作用是用来包装另一个函数或类,包装的目的是在不改变原函数（或类名）的情况下改变被包装对象的行为
+装饰器的原理|被装饰器函数的变量（函数名）绑定装饰器函数调用后的返回的函数
+函数的__name__属性|__name__属性用于记录函数名
+函数的__doc__属性|__doc__属性用于记录文档字符串
+moudle|模块
+模块的定义|模块是一个包含一系列数据，函数，类等组成的程序组
+dir(obj) 函数|返回所有属性的字符串列表
+help(obj) 函数|可以查看模块的文档字符串
+两种方法让用户自定义模块被导入|1. 将模块复制到sys.path提供的路径2. 在运行时，在sys.path里添加自定义的路径
+模块的加载过程|在模块导入时，模块的所有语句都会执行，如果一个模块已经被导入，则再次导入时不会重新执行模块内的语句
+模块的重新加载|import reload(mymod)
+模块的__file__属性|用于绑定此模块对应的文件路径
+什么是主模块|主模块是指程序最先被python3 执行的模块
+模块的隐藏属性|模块中以下划线'_' 开头的属性，在from xxx import * 导入时将不被导入
+package|包
+exception|异常
+异常的概念|异常是指程序出错时标识的一种状态
+异常的作用|用作信号，通知上层调用者有错误产生需要处理
+raise语句|触发一个错误，让程序进入异常状态,发送错误通知给调用者
+assert语句（断言语句）|当真值表达式为False时，用错误数据创建一个AssertionError类型的错误，并进入异常状态
+assert语句（断言语句）语法|assert 真值表达式(False执行)，错误数据（通常是字符串）
+为什么要用异常处理机制|在程序调用层数较深时，向主函数传递错误信息需要层层return返回比较麻烦
+iterator|迭代器
+StopIteration|停止迭代异常类型
+迭代器的用途|用迭代器可以依次访问可迭代对象的数据
+Generator|生成器
+什么是生成器|生成器是能够动态提供数据的对象，生成器对象也是可迭代对象（实例）
+生成器函数的定义|含有yield语句的函数是生成器函数，此函数被调用将返回一个生成器对象
+生成器表达式语法|（表达式 for 变量 in 可迭代对象 [if 真值表达式]）
+迭代工具函数zip(iter1 [, iter2[...]])|返回一个zip对象，此对象用于生成元组，此元组的每个数据来源于参数中的可迭代对象，当最小的可迭代对象不再提供数据时迭代结束
+迭代工具函数enumerate(iterable [, start])|生成带索引的枚举对象， 返回的迭代类型为索引-值对（index-value），默认索引从零开始，也可用start指定
+字节的定义|字节是0~255之间的整数，字节是数据传输和数据存储的基本单位
+bytes(字符串, encoding='utf-8')|用字符串的转换编码生成一个字节串
+bytes(整数n)|生成n个值为0的字节串
+编码（encode）|b = s.encode(encoding='utf-8')
+解码（decode）|s = b.decode(encoding='utf-8')
+文件中的数据的存储形式|文件中的数据是以字节(byte)为单位进行存储的
+文件的迭代读取|文件流对象是可迭代对象，迭代过程将以换行符'\n'作为分隔符依次获取
+标准输入文件|sys.stdin 标准输入文件（默认为键盘设备）
+标准输出文件|sys.stdout 标准输出文件（默认为屏幕终端）
+标准错误输出文件|sys.stderr 标准错误输出文件（默认为屏幕终端）
+文件流对象.tell()|返回当前的读写位置（以字节为单位，从1开始）
+OSError|文件读取错误异常类型
+文件流对象seek()方法|设置文件的读写位置，f.seek(偏移量，whence=相对位置)
+编码注释|在源文件的第一行或第二行写入如下内容为编码注释，# -*- coding:utf-8 -*-
+数据仓库|是在数据库已经大量存在的情况下，为了进一步挖掘数据资源、为了决策需要而产生的
+安装MySQL服务器端|sudo apt-get install mysql-server
+安装MySQL客户端|sudo apt-get install mysql-client
+status|状态
+Linux启动MySQL服务|sudo /etc/init.d/mysql start
+Linux 下让MySQL服务不停止的情况下生效修改|sudo /etc/init.d/mysql reload
+客户端链接MySQL服务|mysql -h 主机地址 -u 用户名 -p 密码
+MySQL:查看所有数据库|show databases;
+MySQL:创建库(指定字符集)|create database 库名 character set utf-8;
+MySQL:查看创建库的语句|show create database 库名;
+MySQL:查看当前所在库|select database();
+MySQL:切换库|use 库名;
+MySQL:查看库中的表|show tables;
+MySQL:删除库|drop database 库名;
+MySQL:创建表|create table 表名(字段1 类型1,...); 
+MySQL:查看创建表的语句（字符集，存储引擎）|show create table 表名;
+MySQL:查看表结构|desc 表名
+MySQL:删除表|drop table 表名;
+MySQL的根目录|/var/lib/mysql
+MySQL:插入(insert)语句|insert into 表名(字段名) values(值1),(值2)....
+MySQL:查询(select)语句|select 字段1, 字段2 from 表名 where 条件;
+MySQL:char 和 varchar 的特点|1. char 浪费存储空间， 性能高2. varchar 节省存储空间，相对性能低
+MySQL:char（宽度）宽度取值范围|（1-255）
+MySQL:varchar(宽度) 宽度取值范围|（1-65535）
+MySQL:字符类型的宽度和数值类型的宽度的区别|数值类型的宽度为显示宽度， 只用于select查询时显示，和占用存储无关，可用zerofill查看效果
+MySQL:枚举类型语法|1. 单选enum：字段名 enum(值1, 值2, ...)2. 多选set：字段名 set(值1, 值2, ...)
+MySQL:sql命令运行时间检测|开启：set profiling=1，查看：show profiles, 关闭 set profiling=0
+MySQL:索引的优缺点|优：加快速度的索引速度 缺点：需要动态维护，占用系统资源，降低数据维护速度
+MySQL:references|参考
+cascade|级联
+MySQL: date 类型|'YYYY-MM-DD'
+MySQL: datetime 类型|'YYYY-MM-DD HH:MM:SS'
+MySQL: timestamp 类型|'YYYY-MM-DD HH:MM:SS'
+MySQL: time 类型|'HH:MM:SS'
+MySQL: datetime 和 timestamp的区别|datetime：不给值默认返回NULL,timestamp: 不给值默认返回系统的当前时间
+MySQL日期时间函数: now()|返回服务器当前的时间
+MySQL日期时间函数: curdate()|返回当前的日期
+MySQL日期时间函数: curtime()|返回当前的时间
+MySQL日期时间函数: date('1999-09-09 09:09:09')|从一个现有的日期时间里提取日期 --> 返回 '1999-09-09'
+MySQL日期时间函数: time('1999-09-09 09:09:09')|从一个现有的日期时间里提取时间 --> 返回 '09：09：09'
+MySQL日期时间函数: year('1999-09-09 09:09:09')|从一个现有的日期时间里提取年份 --> 返回 '1999'
+MySQL：日期时间的运算语法|select 字段名 from 表名 where 字段名 运算符(now()-interval 时间间隔单位);
+MySQL：时间间隔单位|日期时间的运算，时间间隔单位的表示方式 1 day  或 3 hour 或 1 minitue 或 1 year
+interval|间隔
+MySQL: 平均值函数|avg()
+MySQL: 删除表记录|delete from 表名 where 条件;
+MySQL: 更改表记录|update 表名 set 字段1 = 值1, 字段2 = 值2, where 条件;
+MySQL: 空值和空字符串的区别|1. null：空值, 只能用is, is not 去匹配 2. '':空字符串, 只能用= != 去匹配
+MySQL: 模糊查询(like)|where 字段名 like 表达式 注：_ : 匹配单个字符，% : 匹配0到多个字符
+MySQL: 排序|order by 字段名 ASC/DESC
+MySQL: 限制显示查询的条数|limit n;  -->显示n条记录，limit m, n; --> 从第m+1条开始显示, n条
+MySQL: having语句|对查询的结果进行进一步的筛选
+MySQL: where 和 having 的区别|where 关键字只能操作表中实际存在的字段， having 语句可操作由聚合函数生成的显示列
+MySQL: 读锁(共享锁)|查询(select): 加读锁之后，别人不能更改表记录，但可以进行查询
+MySQL: 写锁(互斥锁， 排他锁)|更新(update): 加写锁之后别人不能查，不能改
+MySQL: 行级锁（Innodb）|select : 加读锁，锁1行;update : 加写锁，锁1行
+MySQL:表级锁（MyISAM）|select : 加读锁，锁一张表 ; update : 加写锁，锁一张表
+engine|引擎
+MySQL:查看所有打存储引擎|show engines;
+storage|存储
+MySQL:查看已有表打存储引擎|show create table 表名;
+MySQL:创建表时指定存储引擎|create table 表名(...)engine=MyISAM;
+MySQL:更改已有表的存储引擎|alter table 表名 engine=MyISAM;
+MySQL:InnoDB存储引擎的特点|1. 支持事务/外键/行级锁2. 共享表空间
+MySQL:MyISAM存储引擎的特点|1. 支持表级锁2. 独享表空间(表名.frm,表名.MYD 表记录,表名.MYI 索引信息)
+MySQL:Memory存储引擎的特点|1. 数据存储在内存中，速度快2. 服务器重启，MySQL 服务重启后表记录消失
+MySQL:如何决定使用哪个存储引擎|1. 执行查询操作多的表，使用MyISAM(使用InnoDB浪费资源);2. 执行写操作多的表，使用InnoDB
+MySQL:不显示字段的重复值|select distinct 字段1,字段2 from 表名
+MySQL:默认约束（default）|插入记录时, 不给该字段赋值则使用默认值
+MySQL:索引定义|对数据库中表的一列或多列的值进行排序的一种结构（Btree）
+外键|foreign key
+MySQL:数据导入|load data infile '文件名' into table 表名 fields terminated by '分隔符'  lines terminated by '\n';
+MySQL:数据导入的步骤|1. 查看搜索路径  show variables like 'secure_file_priv' 2. 拷贝文件 sudo cp ~/scoretable.csv /var/lib/mysql-files 3. 导入sql语句
+MySQL:数据导出|select ..from 表名 into outfile "文件名" fileds terminated by '分隔符' lines terminated by '\n'
+MySQL:表的复制|create table 表名 select ... from 表名 where 条件;
+MySQL:复制表结构|create table 表名 select * from 表名 where false;
+MySQL:外键语法格式|create table 表名( 字段1, 类型...,foreign key(参考字段名) references 主表（被参考字段名）on delete 级联动作on update 级联动作;
+MySQL:删除外键|alter table 表名 drop foreign key 外键名;
+MySQL:外键名的查看方式|show create table 表名;
+MySQL:级联动作cascade|数据级联删除，级联更新（参考字段）
+MySQL:级联动作restrict(默认)|从表中有相关联记录，不允许主表操作
+MySQL:级联动作set null|主表删除\更新时，从表相关联记录字段值为NULL
+MySQL:嵌套查询（子查询）|把内层的查询结果作为外层的查询条件
+MySQL:连接查询|内连接（inner join）左连接（left join）右连接（right join）
+MySQL:内连接（inner join）|select 字段名1,... from 表1 inner join 表2 on 条件 inner join 表3 on 条件;
+MySQL:左连接（left join）|select 字段名1... from 表1 left join 表2 on 条件 left join 表3 on 条件;
+privileges|特权
+grant|授权
+identified|身份
+slots|槽
+MySQL:内连接|只显示匹配到的记录
+MySQL:左连接|以左表为主显示查询结果
+MySQL:右连接|以右表为主显示查询结果
+MySQL:数据备份命令格式|mysqldump -u用户名 -p密码 源库名 > ***.sql
+MySQL:数据备份源库名的表示方式|--all-databases 备份所有库;库名备份一个库;-B 库1 库2 库3备份多个库; 库名 表1 表2 备份多张表
+MySQL:数据恢复命令格式|mysql -u用户名 -p 目标库名 < ***.sql
+MySQL:数据恢复从所有库中恢复某一个库|mysql -u用户名 -p --one-database 库名 < ***.sql
+Convert|转换
+broadcast|广播
+孤儿进程|父进程先于子进程退出， 此时子进程就成为孤儿进程
+僵尸进程|子进程先于父进程退出， 父进程没有处理子进程的退出状态， 子进程就会成为僵尸进程
+僵尸进程的坏处|僵尸进程会存留少量PCB信息在内存中， 大量的僵尸进程会消耗系统资源，应该避免僵尸进程的产生
+进程相关函数：获取进程PID|OS.getpid()获取当前进程的进程号
+查看进程树|pstree
+进程（process）定义|程序在计算机中的一次运行过程
+并发|同时处理多个任务， 但是内核在多个任务间不断的切换，达到好像都在处理运行的效果， 但实际一个时间点内核只能处理一个任务
+判断同一个文件夹下是否存在这个文件|os.path.exists(path) 返回值： 存在返回True, 否则返回False
+python os模块实现删除文件|os.remove()  os.unlink() 参数： 目标文件
+sock获取应用的端口|socket.getbyname('')
+deamon|守护
+declarative|声明
